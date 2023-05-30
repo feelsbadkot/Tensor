@@ -34,5 +34,7 @@ int main() {
     cout << "J1 = " << J1 << endl;
     cout << "J2 = " << J2 << endl;
     cout << "J3 = " << J3 << endl;
+    Tensor_II I = Tensor_II(e, 0, T.e().inv_g_matrix());
+    (T.pow(3) - T.pow(2) * J1 + T * J2 - I * J3).show(0);
     return 0;
 }
